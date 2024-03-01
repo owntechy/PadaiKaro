@@ -1,215 +1,171 @@
-<nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
-    <!-- Primary Navigation Menu -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16">
-            <div class="flex">
-                <!-- Logo -->
-                <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
-                        <x-application-mark class="block h-9 w-auto" />
-                    </a>
+<header id="header_part" class="fixed fullwidth_block dashboard">
+    <div id="header" class="not-sticky">
+        <div class="container">
+            <div class="utf_left_side">
+                <div id="logo"> <a href="3"><img src="{{ asset('images-website/logo-t.png')}}" alt=""></a> <a href="3" class="dashboard-logo"><img src="{{ asset('images-website/logo-t.png')}}" alt=""></a> </div>
+                <div class="mmenu-trigger">
+                    <button class="hamburger utfbutton_collapse" type="button">
+                        <span class="utf_inner_button_box">
+                            <span class="utf_inner_section"></span>
+                        </span>
+                    </button>
                 </div>
-
-                <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
-                    </x-nav-link>
-                </div>
+                <nav id="navigation" class="style_one">
+                    <ul id="responsive">
+                        <li><a href="#">Home</a>
+                            <ul>
+                                <li><a href="index_1.html">Home Version 1</a></li>
+                                <li><a href="index_2.html">Home Version 2</a></li>
+                                <li><a href="index_3.html">Home Version 3</a></li>
+                                <li><a href="index_4.html">Home Version 4</a></li>
+                                <li><a href="index_5.html">Home Version 5</a></li>
+                                <li><a href="index_6.html">Home Version 6</a></li>
+                                <li><a href="index_7.html">Home Version 7</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Listings</a>
+                            <ul>
+                                <li><a href="#">List Layout</a>
+                                    <ul>
+                                        <li><a href="listings_list_with_sidebar.html">Listing List Sidebar</a></li>
+                                        <li><a href="listings_list_full_width.html">Listing List Full Width</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Grid Layout</a>
+                                    <ul>
+                                        <li><a href="listings_grid_with_sidebar.html">Listing Grid Sidebar</a></li>
+                                        <li><a href="listings_two_column_map_grid.html">Listing Two Column Grid</a></li>
+                                        <li><a href="listings_grid_full_width.html">Listing Grid Full Width</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Half Listing Map</a>
+                                    <ul>
+                                        <li><a href="listings_half_screen_map_list.html">Listing Half List</a></li>
+                                        <li><a href="listings_half_screen_map_grid.html">Listing Half Grid</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Listing Details</a>
+                                    <ul>
+                                        <li><a href="listings_single_page_1.html">Single Listing Version 1</a></li>
+                                        <li><a href="listings_single_page_2.html">Single Listing Version 2</a></li>
+                                        <li><a href="listings_single_page_3.html">Single Listing Version 3</a></li>
+                                        <li><a href="listings_single_page_4.html">Single Listing Version 4</a></li>
+                                        <li><a href="listings_single_page_5.html">Single Listing Version 5</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a class="current" href="#">User Panel</a>
+                            <ul>
+                                <li><a class="active" href="dashboard.html">Dashboard</a></li>
+                                <li><a href="dashboard_add_listing.html">Add Listing</a></li>
+                                <li><a href="dashboard_my_listing.html">My Listings</a></li>
+                                <li><a href="dashboard_bookings.html">Bookings</a></li>
+                                <li><a href="dashboard_messages.html">Messages</a></li>
+                                <li><a href="dashboard_wallet.html">Wallet</a></li>
+                                <li><a href="dashboard_visitor_review.html">Reviews</a></li>
+                                <li><a href="dashboard_bookmark.html">Bookmark</a></li>
+                                <li><a href="dashboard_my_profile.html">My Profile</a></li>
+                                <li><a href="dashboard_change_password.html">Change Password</a></li>
+                                <li><a href="dashboard_invoice.html">Invoice</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Blog</a>
+                            <ul>
+                                <li><a href="blog_page.html">Blog Grid</a></li>
+                                <li><a href="blog_page_left_sidebar.html">Blog Left Sidebar</a></li>
+                                <li><a href="blog_page_right_sidebar.html">Blog Right Sidebar</a></li>
+                                <li><a href="blog_detail_left_sidebar.html">Blog Detail Leftside</a></li>
+                                <li><a href="blog_detail_right_sidebar.html">Blog Detail Rightside</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Pages</a>
+                            <ul>
+                                <li><a href="page_about.html">About Us</a></li>
+                                <li><a href="#">Categorie Type</a>
+                                    <ul>
+                                        <li><a href="page_categorie_one.html">Categorie One</a></li>
+                                        <li><a href="page_categorie_two.html">Categorie Two</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="add_listing.html">Add Listing</a></li>
+                                <li><a href="listing_booking.html">Booking Listing</a></li>
+                                <li><a href="page_pricing.html">Pricing Plan</a></li>
+                                <li><a href="wishlist_listings.html">Wishlist Page</a></li>
+                                <li><a href="page_filtering_style.html">Filtering Style</a></li>
+                                <li><a href="typography.html">Typography</a></li>
+                                <li><a href="page_element.html">Page Element</a></li>
+                                <li><a href="page_faqs.html">Page Faq</a></li>
+                                <li><a href="#">Icons</a>
+                                    <ul>
+                                        <li><a href="page_icons_one.html">Icon-Mind Icon</a></li>
+                                        <li><a href="page_icons_two.html">Simple Line Icon</a></li>
+                                        <li><a href="page_icons_three.html">Font Awesome Icon</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="page_not_found.html">Page Error 404</a></li>
+                                <li><a href="page_coming_soon.html">Coming Soon</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="clearfix"></div>
             </div>
-
-            <div class="hidden sm:flex sm:items-center sm:ml-6">
-                <!-- Teams Dropdown -->
-                @if (Laravel\Jetstream\Jetstream::hasTeamFeatures())
-                    <div class="ml-3 relative">
-                        <x-dropdown align="right" width="60">
-                            <x-slot name="trigger">
-                                <span class="inline-flex rounded-md">
-                                    <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none focus:bg-gray-50 active:bg-gray-50 transition ease-in-out duration-150">
-                                        {{ Auth::user()->currentTeam->name }}
-
-                                        <svg class="ml-2 -mr-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 15L12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9" />
-                                        </svg>
-                                    </button>
-                                </span>
-                            </x-slot>
-
-                            <x-slot name="content">
-                                <div class="w-60">
-                                    <!-- Team Management -->
-                                    <div class="block px-4 py-2 text-xs text-gray-400">
-                                        {{ __('Manage Team') }}
-                                    </div>
-
-                                    <!-- Team Settings -->
-                                    <x-dropdown-link href="{{ route('teams.show', Auth::user()->currentTeam->id) }}">
-                                        {{ __('Team Settings') }}
-                                    </x-dropdown-link>
-
-                                    @can('create', Laravel\Jetstream\Jetstream::newTeamModel())
-                                        <x-dropdown-link href="{{ route('teams.create') }}">
-                                            {{ __('Create New Team') }}
-                                        </x-dropdown-link>
-                                    @endcan
-
-                                    <div class="border-t border-gray-200"></div>
-
-                                    <!-- Team Switcher -->
-                                    <div class="block px-4 py-2 text-xs text-gray-400">
-                                        {{ __('Switch Teams') }}
-                                    </div>
-
-                                    @foreach (Auth::user()->allTeams() as $team)
-                                        <x-switchable-team :team="$team" />
-                                    @endforeach
-                                </div>
-                            </x-slot>
-                        </x-dropdown>
-                    </div>
-                @endif
-
-                <!-- Settings Dropdown -->
-                <div class="ml-3 relative">
-                    <x-dropdown align="right" width="48">
-                        <x-slot name="trigger">
-                            @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
-                                <button class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition">
-                                    <img class="h-8 w-8 rounded-full object-cover" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" />
-                                </button>
-                            @else
-                                <span class="inline-flex rounded-md">
-                                    <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none focus:bg-gray-50 active:bg-gray-50 transition ease-in-out duration-150">
-                                        {{ Auth::user()->name }}
-
-                                        <svg class="ml-2 -mr-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                                        </svg>
-                                    </button>
-                                </span>
-                            @endif
-                        </x-slot>
-
-                        <x-slot name="content">
-                            <!-- Account Management -->
-                            <div class="block px-4 py-2 text-xs text-gray-400">
-                                {{ __('Manage Account') }}
+            <div class="utf_right_side">
+                <div class="header_widget">
+                    <div class="dashboard_header_button_item has-noti js-item-menu">
+                        <i class="sl sl-icon-bell"></i>
+                        <div class="dashboard_notifi_dropdown js-dropdown">
+                            <div class="dashboard_notifi_title">
+                                <p>You Have 2 Notifications</p>
                             </div>
+                            <div class="dashboard_notifi_item">
+                                <div class="bg-c1 red">
+                                    <i class="fa fa-check"></i>
+                                </div>
+                                <div class="content">
+                                    <p>Your Listing <b>Burger House (MG Road)</b> Has Been Approved!</p>
+                                    <span class="date">2 hours ago</span>
+                                </div>
+                            </div>
+                            <div class="dashboard_notifi_item">
+                                <div class="bg-c1 green">
+                                    <i class="fa fa-envelope"></i>
+                                </div>
+                                <div class="content">
+                                    <p>You Have 7 Unread Messages</p>
+                                    <span class="date">5 hours ago</span>
+                                </div>
+                            </div>
+                            <div class="dashboard_notify_bottom text-center pad-tb-20">
+                                <a href="#">View All Notification</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="utf_user_menu">
+                        <div class="utf_user_name"><span><img src="{{ asset('images/dashboard-avatar.jpg')}}" alt=""></span>Hi, {{ Auth::user()->name }} !</div>
+                        <ul>
+                            <li><a href="#"><i class="sl sl-icon-layers"></i> Dashboard</a></li>
+                            <li> <x-dropdown-link href="{{ route('profile.show') }}">
+                            <i class="sl sl-icon-user"></i>{{ __('Profile') }}
+                            </x-dropdown-link></li>
+                            <li>  <div class="block px-4 py-2 text-xs text-gray-400">
+                            <i class="sl sl-icon-list"></i> {{ __('Manage Account') }}
+                            </div> </li>
+                            <li><!-- Authentication -->
+                                <form method="POST" action="{{ route('logout') }}" x-data>
+                                    @csrf
 
-                            <x-dropdown-link href="{{ route('profile.show') }}">
-                                {{ __('Profile') }}
-                            </x-dropdown-link>
-
-                            @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
-                                <x-dropdown-link href="{{ route('api-tokens.index') }}">
-                                    {{ __('API Tokens') }}
-                                </x-dropdown-link>
-                            @endif
-
-                            <div class="border-t border-gray-200"></div>
-
-                            <!-- Authentication -->
-                            <form method="POST" action="{{ route('logout') }}" x-data>
-                                @csrf
-
-                                <x-dropdown-link href="{{ route('logout') }}"
-                                         @click.prevent="$root.submit();">
-                                    {{ __('Log Out') }}
-                                </x-dropdown-link>
-                            </form>
-                        </x-slot>
-                    </x-dropdown>
+                                    <x-dropdown-link href="{{ route('logout') }}" @click.prevent="$root.submit();">
+                                    <i class="sl sl-lock"></i>  {{ __('Log Out') }}
+                                    </x-dropdown-link>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-
-            <!-- Hamburger -->
-            <div class="-mr-2 flex items-center sm:hidden">
-                <button @click="open = ! open" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out">
-                    <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                        <path :class="{'hidden': open, 'inline-flex': ! open }" class="inline-flex" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                        <path :class="{'hidden': ! open, 'inline-flex': open }" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </button>
             </div>
         </div>
     </div>
-
-    <!-- Responsive Navigation Menu -->
-    <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
-        <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                {{ __('Dashboard') }}
-            </x-responsive-nav-link>
-        </div>
-
-        <!-- Responsive Settings Options -->
-        <div class="pt-4 pb-1 border-t border-gray-200">
-            <div class="flex items-center px-4">
-                @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
-                    <div class="shrink-0 mr-3">
-                        <img class="h-10 w-10 rounded-full object-cover" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" />
-                    </div>
-                @endif
-
-                <div>
-                    <div class="font-medium text-base text-gray-800">{{ Auth::user()->name }}</div>
-                    <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
-                </div>
-            </div>
-
-            <div class="mt-3 space-y-1">
-                <!-- Account Management -->
-                <x-responsive-nav-link href="{{ route('profile.show') }}" :active="request()->routeIs('profile.show')">
-                    {{ __('Profile') }}
-                </x-responsive-nav-link>
-
-                @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
-                    <x-responsive-nav-link href="{{ route('api-tokens.index') }}" :active="request()->routeIs('api-tokens.index')">
-                        {{ __('API Tokens') }}
-                    </x-responsive-nav-link>
-                @endif
-
-                <!-- Authentication -->
-                <form method="POST" action="{{ route('logout') }}" x-data>
-                    @csrf
-
-                    <x-responsive-nav-link href="{{ route('logout') }}"
-                                   @click.prevent="$root.submit();">
-                        {{ __('Log Out') }}
-                    </x-responsive-nav-link>
-                </form>
-
-                <!-- Team Management -->
-                @if (Laravel\Jetstream\Jetstream::hasTeamFeatures())
-                    <div class="border-t border-gray-200"></div>
-
-                    <div class="block px-4 py-2 text-xs text-gray-400">
-                        {{ __('Manage Team') }}
-                    </div>
-
-                    <!-- Team Settings -->
-                    <x-responsive-nav-link href="{{ route('teams.show', Auth::user()->currentTeam->id) }}" :active="request()->routeIs('teams.show')">
-                        {{ __('Team Settings') }}
-                    </x-responsive-nav-link>
-
-                    @can('create', Laravel\Jetstream\Jetstream::newTeamModel())
-                        <x-responsive-nav-link href="{{ route('teams.create') }}" :active="request()->routeIs('teams.create')">
-                            {{ __('Create New Team') }}
-                        </x-responsive-nav-link>
-                    @endcan
-
-                    <div class="border-t border-gray-200"></div>
-
-                    <!-- Team Switcher -->
-                    <div class="block px-4 py-2 text-xs text-gray-400">
-                        {{ __('Switch Teams') }}
-                    </div>
-
-                    @foreach (Auth::user()->allTeams() as $team)
-                        <x-switchable-team :team="$team" component="responsive-nav-link" />
-                    @endforeach
-                @endif
-            </div>
-        </div>
-    </div>
-</nav>
+</header>
