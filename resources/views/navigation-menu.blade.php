@@ -150,15 +150,12 @@
                             <li> <x-dropdown-link href="{{ route('profile.show') }}">
                             <i class="sl sl-icon-user"></i>{{ __('Profile') }}
                             </x-dropdown-link></li>
-                            <li>  <div class="block px-4 py-2 text-xs text-gray-400">
-                            <i class="sl sl-icon-list"></i> {{ __('Manage Account') }}
-                            </div> </li>
                             <li><!-- Authentication -->
                                 <form method="POST" action="{{ route('logout') }}" x-data>
                                     @csrf
 
                                     <x-dropdown-link href="{{ route('logout') }}" @click.prevent="$root.submit();">
-                                    <i class="sl sl-lock"></i>  {{ __('Log Out') }}
+                                    <i class="sl sl-logout"></i>  {{ __('Log Out') }}
                                     </x-dropdown-link>
                                 </form>
                             </li>

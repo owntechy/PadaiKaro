@@ -4,15 +4,16 @@
             {{ __('Profile') }}
         </h2>
     </x-slot>
-
-    <div>
-        <div class="max-w-7xl mx-auto py-10 sm:px-6 lg:px-8">
+    <div class="utf_dashboard_content mb-10">       
+    <div class="row">
+        <div class="col-md-12 mt-5">
             @if (Laravel\Fortify\Features::canUpdateProfileInformation())
                 @livewire('profile.update-profile-information-form')
 
                 <x-section-border />
             @endif
-
+        </div>
+            <div class="col-md-12 mt-5">
             @if (Laravel\Fortify\Features::enabled(Laravel\Fortify\Features::updatePasswords()))
                 <div class="mt-10 sm:mt-0">
                     @livewire('profile.update-password-form')
@@ -20,7 +21,8 @@
 
                 <x-section-border />
             @endif
-
+            </div>
+            <div class="col-md-12 mt-5">
             @if (Laravel\Fortify\Features::canManageTwoFactorAuthentication())
                 <div class="mt-10 sm:mt-0">
                     @livewire('profile.two-factor-authentication-form')
@@ -28,7 +30,8 @@
 
                 <x-section-border />
             @endif
-
+            </div>
+            <div class="col-md-12 mt-5">
             <div class="mt-10 sm:mt-0">
                 @livewire('profile.logout-other-browser-sessions-form')
             </div>
@@ -40,6 +43,9 @@
                     @livewire('profile.delete-user-form')
                 </div>
             @endif
+            </div>
         </div>
     </div>
+    </div>
+    
 </x-app-layout>
